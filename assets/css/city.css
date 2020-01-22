@@ -1,0 +1,189 @@
+.content {
+	display: grid;
+	grid-template-rows: 3.125rem 7.75rem 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
+	padding: 3.6875rem 5%;
+}
+
+.first_wrap {
+	grid-row: 1/2;
+	grid-column: 1/4;
+	margin-bottom: 1.35rem;
+	position: relative;
+	align-self: start;
+	display: flex;
+}
+
+#icon_backward {
+	font-family: "Font Awesome 5 Free", "Times New Roman", Times, serif;
+	color: #e35865;
+	font-size: 2.25rem;
+	margin-right: 2.5rem;
+	position: relative;
+}
+
+#reload {
+	position: absolute;
+	font-family: "Circular";
+	font-size: 1.5625rem;
+	align-self: center;
+	right: 0rem;
+	border: 0.2rem solid #e35865;
+	color: #ffffff;
+	cursor: pointer;
+	background: 0;
+	grid-row: 2/3;
+}
+
+#city_name {
+	font-family: "Circular", sans-serif;
+	font-size: 2.25rem;
+	color: #ffffff;
+}
+
+.weather-wrapper {
+	grid-row: 2/3;
+	grid-column: 1/4;
+	border-bottom: 0.2rem solid #e35865;
+	display: flex;
+	align-items: flex-end;
+	padding-bottom: 0.9375rem;
+	justify-content: space-between;
+}
+
+.weather-wind {
+	display: block;
+	font-family: "Circular";
+	font-size: 1.625rem;
+	color: #ffffff;
+}
+
+.weather-condition {
+	display: block;
+	font-family: "Circular";
+	font-size: 1.625rem;
+	color: #ffffff;
+	margin-top: 0.75rem;
+}
+
+#wind-icon {
+	font-family: "Font Awesome 5 Pro Light";
+	font-size: 1.5625rem;
+	font-style: italic;
+	color: #ffffff;
+	padding-right: 0.1rem;
+	margin-right: 0.8125rem;
+}
+
+#cloud-icon {
+	font-family: "Font Awesome 5 Pro Light";
+	font-size: 1.25rem;
+	font-style: italic;
+	color: #ffffff;
+	padding-right: 0.1rem;
+	margin-right: 0.8125rem;
+}
+
+#temperature {
+	font-family: "Circular";
+	font-size: 1.5rem;
+	color: #ffffff;
+}
+
+.recommended-songs--wrapper {
+	grid-column: 1/4;
+	grid-row: 3/4;
+	color: hsla(0, 0%, 100%, 0.9);
+	text-decoration: none;
+	display: flex;
+	flex-flow: row wrap;
+}
+.song-listing--item-album-img > img {
+	max-width: 9.375rem;
+	max-height: 9.375rem;
+	box-shadow: 0 0 1rem black;
+
+}
+
+.song-listing--item-album-img{
+	max-width: 9.375rem;
+	max-height: 9.375rem;
+}   
+	
+.song-listing--item {
+	display: flex;
+	flex: 30% 1;
+	padding: 1rem 2.5rem 1rem 0;
+	cursor: pointer;
+	position: relative;
+  	align-items: flex-start;
+  	color:  #ffffff;
+}
+
+.song-listing--info-wrapper .song-listing--artist {
+  color: #E35865;
+}
+
+.song-listing--info-wrapper {
+	background: #2d374c;
+	padding: 0.9375rem 3.125rem 0.9375rem 0.625rem;
+	color: #1a1e3d;
+	border: 1px solid #15161e;
+	-webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+	-webkit-transform: translateX(-10%);
+	-ms-transform: translateX(-10%);
+	transform: translateX(-10%);
+  	margin-top: 2rem;
+	  color: #ffffff;
+	  padding-left: 1rem;
+	  display: -ms-flexbox;
+	  display: flex;
+	  -ms-flex-flow: column nowrap;
+	  flex-flow: column nowrap;
+}
+
+@media only screen and (min-width: 700px) {
+	.song-listing--info-wrapper{
+		background: #2d324c;
+		padding: 15px 50px 15px 10px;
+		color: #1a1e3d;
+		border: 1px solid #15161e;
+		-webkit-box-shadow: 1px 1px 4px rgba(0,0,0,.7);
+		box-shadow: 1px 1px 4px rgba(0,0,0,.7);
+		-webkit-transform: translateX(-10%);
+		-ms-transform: translateX(-10%);
+		transform: translateX(-10%);
+		margin-top: 2rem;
+}
+}
+
+.song-listing--trackname{
+	font-family: 'Bree Serif';
+	font-size: 1.25rem;
+	color: #ffffff;
+}
+
+.song-listing--artist{
+	font-family: 'Bree Serif';
+	font-size: 1rem;
+	color: #E35865;
+}
+
+#second-background{
+	background-color: #E35865;
+	position: absolute;
+}
+
+#myVideo {
+	position: fixed;
+	z-index: -9999999;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+}
+
+/* Add some content at the bottom of the video/page */
