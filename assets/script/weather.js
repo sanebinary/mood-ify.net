@@ -16,7 +16,7 @@ async function getCurrentWeather(coord) {
     //Move api to backend to avoid leaking api key
 
     try {
-        const response  = await fetch("/weather/", {
+        const response  = await fetch("/weather", {
             method : 'POST',
             headers: {
                 'Content-Type': 'application/json'
