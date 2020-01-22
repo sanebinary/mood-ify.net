@@ -5,6 +5,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <!-- The video -->
 
 <head>
+    <script src="../assets/script/weather.js"></script>
     <link rel="stylesheet" type="text/css" href="../assets/css/city.css">
 </head>
 
@@ -15,22 +16,22 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <div class="content">
         <div class="first_wrap">
             <a id="icon_backward"></a>
-            <span id="city_name">Ho Chi Minh City</span>
-            <button id="reload">Reroll</button>
+            <span id="city_name"></span>
+            <button id="reload" >Reroll</button>
         </div>
         <div class="weather-wrapper">
             <div class="weather-left">
                 <span class="weather-wind">
                     <span id="wind-icon"></span>
-                    4.6m/s
+                    <span id="wind-speed"></span>
                 </span>
                 <span class="weather-condition">
                     <span id="cloud-icon"></span>
-                    light rain
+                    <span id="weather-condition"></span>
                 </span>
             </div>
             <div class="weather-temperature">
-                <span id="temperature">14.0°C</span>
+                <span id="temperature"></span>
             </div>
         </div>
         <div class="recommended-songs--wrapper">

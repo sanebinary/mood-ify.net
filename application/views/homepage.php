@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet"
+	<script src="../assets/script/weather.js"></script> 
 </head>
 <body>
 
@@ -24,27 +24,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</div>
 
 	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
+	<button onclick=test()>Click me </button>
 </div>
 
 </body>
 </html>
-
-<?php
-
- //get JSON
- $json = file_get_contents('http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=e93a77b66ee2a358a6b96616ec11c743');
- 
-
- //decode JSON to array
- $data = json_decode($json,true);
-
- //show data
- var_dump($data);
-
- //description
- echo $data['weather'][0]['description'];
- //temperature
- echo $data['main']['temp'];
-
-
-?> 
+<?php 
+	echo 'Curl: ', function_exists('curl_version') ? 'Enabled' : 'Disabled';
+?>
