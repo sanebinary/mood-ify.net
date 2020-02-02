@@ -8,7 +8,7 @@ application/logs/*
 
 !application/*/.htaccess
 
-application/models/key.php
+application/models/keys.php
 
 composer.lock
 
