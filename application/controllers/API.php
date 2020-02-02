@@ -1,7 +1,5 @@
 <?php
-defined('BASEPATH') or exit('No direct script access allowed');
-
-class City extends CI_Controller
+class API extends CI_Controller
 {
     public function __construct()
     {
@@ -29,12 +27,5 @@ class City extends CI_Controller
         return $token;
     }
 
-    public function getRecommendation(){
-        $endpoint = "https://api.spotify.com/v1/recommendations";
-        $seed = $this->SpotifyRecom->sunny();
-        $seed = http_build_query($seed);
-        $seed = preg_replace('/%5B[0-9]+%5D/simU', '', $seed);
-        $request = $this->APIrequest->requestRecommendation($endpoint, $seed, $this->token());
-        var_dump(json_decode($request));
-    } 
+    
 }
