@@ -1,6 +1,6 @@
 .DS_Store
 
-/test*
+/test.json
 
 application/cache/*
 !application/cache/index.html
