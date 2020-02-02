@@ -35,6 +35,5 @@ class City extends CI_Controller
         $seed = http_build_query($seed);
         $seed = preg_replace('/%5B[0-9]+%5D/simU', '', $seed);
         $request = $this->APIrequest->requestRecommendation($endpoint, $seed, $this->token());
-        var_dump(json_decode($request));
     } 
 }
