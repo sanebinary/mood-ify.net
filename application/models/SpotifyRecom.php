@@ -4,13 +4,13 @@ class SpotifyRecom extends CI_Model
     //spotify requires three compulsory seed values
     public $required_seeds;
     public $optional_seeds;
+    public $limit;
 
     //return all recommendation seeds 
     public function sunny()
     {
         //function will return this array
         $seeds = [];
-
         //variables
         $seed_proportion = $this->getRandSeeds();
         $seed_item_limit = 5;
