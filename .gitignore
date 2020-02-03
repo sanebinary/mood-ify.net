@@ -1,5 +1,7 @@
 .DS_Store
 
+test*
+
 application/cache/*
 !application/cache/index.html
 
@@ -7,6 +9,8 @@ application/logs/*
 !application/logs/index.html
 
 !application/*/.htaccess
+
+application/models/keys.php
 
 composer.lock
 
