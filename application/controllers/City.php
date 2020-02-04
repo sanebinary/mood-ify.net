@@ -32,7 +32,7 @@ class City extends CI_Controller
     public function getRecommendation(){
         //set endpoint url and get seeds from model
         $endpoint = "https://api.spotify.com/v1/recommendations";
-        $seed = $this->SpotifyRecom->sunny();
+        $seed = $this->SpotifyRecom->rainy();
         $limit = $seed["limit"];
         $data['limit'] = $limit;
 
@@ -42,7 +42,6 @@ class City extends CI_Controller
 
         //turn response to json format
         $request = json_decode($this->APIrequest->requestRecommendation($endpoint, $seed, $this->token()),TRUE);
-        
         //
         $artists = [];
         $tracks = [];
