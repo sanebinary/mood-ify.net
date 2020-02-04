@@ -10,7 +10,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 <body>
     <video autoplay="" muted="" loop="" id="myVideo" disablepictureinpicture controlsList="nodownload">
-        <source src="../assets/videos/D.mp4" type="video/mp4">
+        <source src="../assets/videos/rain.mp4" type="video/mp4">
     </video>
     <div class="content">
         <div class="first_wrap">
