@@ -5,6 +5,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <!-- The video -->
 
 <head>
+
+    <script src="https://kit.fontawesome.com/3fd3eae269.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="../assets/css/city.css">
 </head>
 
@@ -14,7 +16,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     </video>
     <div class="content">
         <div class="first_wrap">
-            <a id="icon_backward"></a>
+            <a id="icon_backward"><i class="fas fa-backward"></i></a>
             <span id="city_name">Ho Chi Minh City</span>
             <button id="reload">Reroll</button>
         </div>
@@ -54,10 +56,4 @@ defined('BASEPATH') or exit('No direct script access allowed');
     </div>
     <div id="second-background">
     </div>
-
-    <!--<video autoplay muted loop id="myVideo">
-        <source src="../assets/videos/D.mp4" type="video/mp4">
-    </video>-->
-</body>
-
 </html>
