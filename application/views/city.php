@@ -6,7 +6,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 <head>
     <script src="https://kit.fontawesome.com/3fd3eae269.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/css/city.css')?>">
+    <link rel="stylesheet" type="text/css" href="../assets/css/city.css">
 </head>
 
 <body>
