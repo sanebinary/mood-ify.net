@@ -57,7 +57,8 @@ class City extends CI_Controller
         $data['tracks'] = $tracks;
         $data['images'] = $image_urls;
         $data['albums'] = $album_names;
-        $this->load->view('city', $data);
+        echo base_url('assets/city/city.css');
+        //$this->load->view('city', $data);
         //[0]['album']['artists'][0];
         //$this->load->view('city',$data);
     } 
