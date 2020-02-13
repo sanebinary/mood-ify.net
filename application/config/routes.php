@@ -53,3 +53,4 @@ $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['weather']['POST'] = 'weather/getweather';
+$route['city/(:any)'] = 'city/index/$1';

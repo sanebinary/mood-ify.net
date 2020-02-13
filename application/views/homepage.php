@@ -25,10 +25,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
 	<button onclick=test()>Click me </button>
+	<form method="POST" action="/welcome">
+		<input name="username"></input> 
+		<input name="password"></input>
+		<button type="submit">Submit</button>
+	</form>
+	<?php 
+	echo 'Curl: ', function_exists('curl_version') ? 'Enabled ' : 'Disabled';
+	phpinfo();
+	?>
 </div>
 
 </body>
 </html>
-<?php 
-	echo 'Curl: ', function_exists('curl_version') ? 'Enabled' : 'Disabled';
-?>
+
+ 
+

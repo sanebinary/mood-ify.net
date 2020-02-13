@@ -16,22 +16,22 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <div class="content">
         <div class="first_wrap">
             <a id="icon_backward"></a>
-            <span id="city_name"></span>
+            <span id="city_name"><?php echo $city;?></span>
             <button id="reload" >Reroll</button>
         </div>
         <div class="weather-wrapper">
             <div class="weather-left">
                 <span class="weather-wind">
                     <span id="wind-icon"></span>
-                    <span id="wind-speed"></span>
+                    <span id="wind-speed"><?php echo $windspeed;?></span>
                 </span>
                 <span class="weather-condition">
                     <span id="cloud-icon"></span>
-                    <span id="weather-condition"></span>
+                    <span id="weather-condition"><?php echo $condition;?></span>
                 </span>
             </div>
             <div class="weather-temperature">
-                <span id="temperature"></span>
+                <span id="temperature"><?php echo $temp;?></span>
             </div>
         </div>
         <div class="recommended-songs--wrapper">

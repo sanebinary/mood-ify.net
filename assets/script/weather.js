@@ -5,42 +5,48 @@ function getUserLocation() {
 }
 
 function updateDom(data) {
-    document.getElementById("city_name").innerHTML = data.name;
-    document.getElementById("wind-speed").innerHTML = data.wind.speed + " m/s";
-    document.getElementById("weather-condition").innerHTML = data.weather[0].main;
-    document.getElementById("temperature").innerHTML = data.main.temp.toFixed(1) + "°C";
+    document.getElementById("city_name").innerHTML = data.name || "Paris";
+    document.getElementById("wind-speed").innerHTML = data.wind.speed + " m/s" || "1m/s";
+    document.getElementById("weather-condition").innerHTML = data.weather[0].main || "Fog";
+    document.getElementById("temperature").innerHTML = data.main.temp.toFixed(1) + "°C"|| "10°C";
     console.log("DOM update");
 }
 
 async function getCurrentWeather(coord) {
-    //Move api to backend to avoid leaking api key
+    
 
     try {
+        const data = new FormData();
+        data.append("lat", coord.lat);
+        data.append("lon", coord.lon);
         const response  = await fetch("/weather", {
-            method : 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-                // 'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            body : JSON.stringify(coord)
+            method : 'POST',           
+            body : data
         });
-        if (response.status === 200) return await response.json();
+        if (response.status === 200) 
+            return response
+            .json()
+            .then(data =>  (data))
+            .catch(err => {throw ("Can't handle JSON" + err)});
         else throw new Error("Can't get weather data");  
     } catch (err) {
-        throw(err);
+        throw(err + "Problem when fetch");
     }
 }
 
-async function test()  {
-    const pos = await getUserLocation();
-    const location = {lat:pos.coords.latitude, lon:pos.coords.longitude};
+async function main()  {
+    
+
+    let weather = "";
     try {
-        const weather = await getCurrentWeather(location);
-        updateDom(weather);   
+        const pos = await getUserLocation();
+        const location = {lat:pos.coords.latitude, lon:pos.coords.longitude};
+        weather = await getCurrentWeather(location);
+        console.log(weather);
+
     } catch(err) {
         console.log(err);
+        const weather = "";
     }
-    
+    updateDom(weather);
 }
-
-window.onload = test;
