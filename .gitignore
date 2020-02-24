@@ -10,9 +10,6 @@ application/logs/*
 
 !application/*/.htaccess
 
-application/models/keys.php
-
-composer.lock
 
 user_guide_src/build/*
 user_guide_src/cilexer/build/*

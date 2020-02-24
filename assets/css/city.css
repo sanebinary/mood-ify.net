@@ -15,7 +15,7 @@
 }
 
 #icon_backward {
-	font-family: "Font Awesome 5 Free", "Times New Roman", Times, serif;
+	font-family: "Font Awesome 5 Pro", "Times New Roman", Times, serif;
 	color: #e35865;
 	font-size: 2.25rem;
 	margin-right: 2.5rem;
@@ -184,6 +184,7 @@
 	bottom: 0;
 	min-width: 100%;
 	min-height: 100%;
+	object-fit: cover;
 }
 
 /* Add some content at the bottom of the video/page */
