@@ -53,6 +53,4 @@ defined('BASEPATH') or exit('No direct script access allowed');
         </div>
     </div>
     </div>
-    <div id="second-background">
-    </div>
 </html>
