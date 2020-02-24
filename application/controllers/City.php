@@ -10,6 +10,8 @@ class City extends CI_Controller
         $this->load->model('APIrequest');
         $this->load->model('APItoken');
         $this->load->model('SpotifyRecom');
+        $this->load->model('Weather');
+        $this->load->helper('url');
     }
 
     public function token()
@@ -22,7 +24,7 @@ class City extends CI_Controller
         $clientSecret = $creds->getClientSecret();
        
         //send a request for a token to the API 
-        $request = $this->APIrequest->requestToken($clientId,$clientSecret, $tokenUrl);
+        $request = $this->APIrequest->requestToken($clientId,$clientSecret, $tokenUrl); 
 
         //get the token from the json response
         $token = $this->APItoken->sepToken($request)->getToken();
@@ -30,9 +32,29 @@ class City extends CI_Controller
     }
 
     public function getRecommendation(){
+        //get weather data
+        $weather = $this->Weather->getWeather();
+        
+        if ($weather["cod"] == 200) {
+            $data["city"] = $weather["name"];
+            $data["windspeed"] = $weather["wind"]["speed"];
+            $data["condition"] = $weather["weather"][0]["main"];
+            $data["temp"]= $weather["main"]["temp"];
+        }
+        else {
+            redirect("/search");
+            die();
+        }
+
         //set endpoint url and get seeds from model
+        $seedlist = array("Rain" => 'sunny', "Clouds" =>'sunny', "Drizzle" => 'sunny',"Snow" => 'sunny');
         $endpoint = "https://api.spotify.com/v1/recommendations";
+      
+        $weaCondition =$seedlist[$data["condition"]];
+        $seed = $this->SpotifyRecom->$weaCondition();
+
         $seed = $this->SpotifyRecom->rainy();
+
         $limit = $seed["limit"];
         $data['limit'] = $limit;
 
@@ -57,8 +79,12 @@ class City extends CI_Controller
         $data['tracks'] = $tracks;
         $data['images'] = $image_urls;
         $data['albums'] = $album_names;
-        $this->load->view('city', $data);
-        //[0]['album']['artists'][0];
-        //$this->load->view('city',$data);
+        return $data;
     } 
+
+
+    public function index()
+    {
+        $this->load->view('city', $this->getRecommendation());
+    }
 }
