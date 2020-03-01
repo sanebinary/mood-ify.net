@@ -2,120 +2,73 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
-<!-- The video -->
 
 <head>
-    <script src="../assets/script/weather.js"></script>
     <link rel="stylesheet" type="text/css" href="../assets/css/city.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/reloadbutton.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/backbutton.css">
 </head>
 
 <body>
-    <video autoplay="" muted="" loop="" id="myVideo" disablepictureinpicture controlsList="nodownload">
-        <source src="../assets/videos/D.mp4" type="video/mp4">
-    </video>
     <div class="content">
         <div class="first_wrap">
-            <a id="icon_backward"></a>
-            <span id="city_name"><?php echo $city;?></span>
-            <button id="reload" >Reroll</button>
+            <a id="icon_backward" href="/"></a>
+            <span id="city_name"><?php echo $city; ?></span>
+            <!--<button id="button">Reroll</button>-->
+            <a href="." class="button nav-link">
+
+                <div class="bottom"></div>
+
+                <div class="top">
+
+                    <div class="label">Reload</div>
+
+                    <div class="button-border button-border-left"></div>
+                    <div class="button-border button-border-top"></div>
+                    <div class="button-border button-border-right"></div>
+                    <div class="button-border button-border-bottom"></div>
+
+                </div>
+
+            </a>
         </div>
         <div class="weather-wrapper">
             <div class="weather-left">
                 <span class="weather-wind">
                     <span id="wind-icon"></span>
-                    <span id="wind-speed"><?php echo $windspeed;?></span>
+                    <span id="wind-speed"><?php echo $windspeed; ?> m/s</span>
                 </span>
                 <span class="weather-condition">
                     <span id="cloud-icon"></span>
-                    <span id="weather-condition"><?php echo $condition;?></span>
+                    <span id="weather-condition"><?php echo $condition; ?></span>
                 </span>
             </div>
             <div class="weather-temperature">
-                <span id="temperature"><?php echo $temp;?></span>
+                <span id="temperature"><?php echo $temp; ?>°C</span>
             </div>
         </div>
         <div class="recommended-songs--wrapper">
-            <?php $x = 0; while ($x < $limit){?>
+            <?php $x = 0;
+            while ($x < $limit) { ?>
                 <a class="song-listing--item">
                     <div class="song-listing--item-album-img">
-                        <img src="<?php echo $images[$x];?>" alt="<?php echo $albums[$x];?>">
+                        <img src="<?php echo $images[$x]; ?>" alt="<?php echo $albums[$x]; ?>">
                     </div>
                     <div class="song-listing--info-wrapper">
                         <div class="song-listing--trackname">
-                            <?php echo $tracks[$x];?>
+                            <?php echo $tracks[$x]; ?>
                         </div>
                         <div class="song-listing--artist">
-                            <?php echo $artists[$x];?>
+                            <?php echo $artists[$x]; ?>
                         </div>
                     </div>
                 </a>
-            <?php $x++;} ?>
+            <?php $x++;
+            } ?>
         </div>
     </div>
     </div>
-    <div id="second-background">
-    </div>
 
-    <!--<video autoplay muted loop id="myVideo">
-        <source src="../assets/videos/D.mp4" type="video/mp4">
-    </video>-->
 </body>
 
-</html>
-=======
-<?php
-defined('BASEPATH') or exit('No direct script access allowed');
-?>
-<!DOCTYPE html>
-<!-- The video -->
-
-<head>
-    <script src="https://kit.fontawesome.com/3fd3eae269.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="../assets/css/city.css">
-</head>
-
-<body>
-    <video autoplay="" muted="" loop="" id="myVideo" disablepictureinpicture controlsList="nodownload">
-        <source src="../assets/videos/rain.mp4" type="video/mp4">
-    </video>
-    <div class="content">
-        <div class="first_wrap">
-            <a id="icon_backward"><i class="fas fa-backward"></i></a>
-            <span id="city_name">Ho Chi Minh City</span>
-            <button id="reload">Reroll</button>
-        </div>
-        <div class="weather-wrapper">
-            <div class="weather-left">
-                <span class="weather-wind">
-                    <span id="wind-icon"></span>
-                    4.6m/s
-                </span>
-                <span class="weather-condition">
-                    <span id="cloud-icon"></span>
-                    light rain
-                </span>
-            </div>
-            <div class="weather-temperature">
-                <span id="temperature">14.0°C</span>
-            </div>
-        </div>
-        <div class="recommended-songs--wrapper">
-            <?php $x = 0; while ($x < $limit){?>
-                <a class="song-listing--item">
-                    <div class="song-listing--item-album-img">
-                        <img src="<?php echo $images[$x];?>" alt="<?php echo $albums[$x];?>">
-                    </div>
-                    <div class="song-listing--info-wrapper">
-                        <div class="song-listing--trackname">
-                            <?php echo $tracks[$x];?>
-                        </div>
-                        <div class="song-listing--artist">
-                            <?php echo $artists[$x];?>
-                        </div>
-                    </div>
-                </a>
-            <?php $x++;} ?>
-        </div>
-    </div>
-    </div>
 </html>

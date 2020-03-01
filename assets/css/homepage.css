@@ -1,0 +1,146 @@
+@font-face {
+	font-family: Proxima Nova;
+	src: url(../fonts/Proxima\Nova\Alt\Bold.woff) format(woff);
+}
+
+@font-face {
+	font-family: Circular;
+	src: url(../fonts/lineto-circular-pro-book.ttf) format(ttf);
+}
+
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0rem;
+	font-size: 62.5%;
+}
+
+body {
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+body::after {
+	background-image: url(../imgs/jamakassi-wejxKZ-9IZg-unsplash.jpg);
+	background-position: right bottom;
+	content: "";
+	opacity: 0.9;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: -1;
+}
+
+.city-find-page--wrapper {
+	margin: 0 auto;
+	display: flex;
+	justify-content: flex-start;
+	flex-flow: column nowrap;
+	padding: 36vh 1.38% 50rem;
+	max-width: 128rem;
+	max-height: 100vh;
+}
+
+.city-find-page-title {
+	color: #ffffff;
+	font-family: Proxima Nova;
+	font-weight: bold;
+	font-size: 3.6rem;
+	position: absolute;
+	top: 5vh;
+	left: 5%;
+	text-align: right;
+	width: 90%;
+	text-transform: uppercase;
+	-webkit-transition: 0.4s ease;
+	-o-transition: 0.4s ease;
+	transition: 0.4s ease;
+}
+
+#mood {
+	opacity: 1;
+	outline: none;
+	text-decoration: none;
+	color:inherit;
+}
+
+#city-find-page-title--dot {
+	font-family: Proxima Nova;
+	font-weight: bold;
+	font-size: 3.6rem;
+	color: #e35b65;
+	opacity: 1;
+}
+
+.city-find-page-connect {
+	color: #ffffff;
+	padding-bottom: 1.5rem;
+	font-family: Proxima Nova;
+	font-size: 3.6rem;
+	font-weight: bold;
+	margin-left: 0;
+	margin-right: 0rem;
+	padding-left: 0.35rem;
+}
+
+.city-find-form--wrapper {
+	width: 100%;
+	background: rgba(255, 255, 255, 0.5);
+}
+
+.city-find-form {
+	border: 0.4rem solid #e35865;
+	border-top: 0;
+	border-right: 0;
+	border-left: 0;
+	padding-left: 0.8rem;
+	padding-bottom: 1rem;
+	padding-top: 1rem;
+}
+
+.city-find-form--input {
+	width: 100%;
+	font-family: Circular;
+	font-size: 3rem;
+	color: #61605e;
+	background: none;
+	border: none;
+	cursor: pointer;
+	outline: 0;
+	cursor: text;
+}
+
+.city-find-form--input:focus {
+	outline-offset: -0.2rem;
+	caret-color: #61605e;
+}
+
+.dot {
+	color: #e35865;
+}
+
+#Spotify {
+	color: #1db954;
+}
+
+.deep-quotes {
+	color: #ffffff;
+	font-family: Circular;
+	font-size: 1.8rem;
+	align-self: flex-end;
+	margin-top: 0.8rem;
+}
+#myVideo {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	min-width: 100%;
+	min-height: 100%;
+	width: fit-content;
+	height: fit-content;
+	z-index: -1000;
+	overflow: hidden;
+}

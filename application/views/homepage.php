@@ -1,43 +1,33 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
+defined('BASEPATH') or exit('No direct script access allowed');
+?>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<script src="../assets/script/weather.js"></script> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../assets/css/homepage.css">
+    <link href="https://fonts.googleapis.com/css?family=Sigmar+One&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Moodify Search Page</title>
 </head>
+
 <body>
 
-<div id="container">
-	<h1>Welcome to CodeIgniter!</h1>
+    <div class="city-find-page--wrapper">
+        <div class="city-find-page-title"><a id="mood" href="<?php echo base_url()?>">Moodify</a><a id="city-find-page-title--dot">.</a></div>
+        <span class="city-find-page-connect">Connect to <a id="Spotify">Spotify</a></span>
+        <div class="city-find-form--wrapper">
+            <form class="city-find-form" method="GET" action="/city/">
+                <input autocomplete="off" spellcheck="false" class="city-find-form--input" type="text" placeholder="search places" name="city">
+            </form>
+        </div>
+        <p class="deep-quotes">Find your city<a class="dot">.</a> Check your weather<a class="dot">.</a> Listen to our music<a class="dot">.</a></p>
 
-	<div id="body">
-		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
-
-		<p>If you would like to edit this page you'll find it located at:</p>
-		<code>application/views/welcome_message.php</code>
-
-		<p>The corresponding controller for this page is found at:</p>
-		<code>application/controllers/Welcome.php</code>
-
-		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
-	</div>
-
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
-	<button onclick=test()>Click me </button>
-	<form method="POST" action="/welcome">
-		<input name="username"></input> 
-		<input name="password"></input>
-		<button type="submit">Submit</button>
-	</form>
-	<?php 
-	echo 'Curl: ', function_exists('curl_version') ? 'Enabled ' : 'Disabled';
-	phpinfo();
-	?>
-</div>
+    </div>
 
 </body>
+
 </html>
-
- 
-

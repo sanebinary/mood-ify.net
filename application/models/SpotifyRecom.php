@@ -13,7 +13,6 @@ class SpotifyRecom extends CI_Model
         $seeds = [];
         //variables
         $seed_proportion = $this->getRandSeeds();
-        $seed_item_limit = 5;
 
         //public stuff
         $this->optional_seeds = array(
@@ -37,6 +36,7 @@ class SpotifyRecom extends CI_Model
         //separate keys and values of the required seeds 
         //the separation is to make it easier to choose the seed values randomly 
         $seed_values = [];
+        
         foreach ($this->required_seeds as $key => $value){
             array_push($seed_values, $value); 
         }
