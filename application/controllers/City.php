@@ -49,21 +49,23 @@ class City extends CI_Controller
         $response = json_decode($this->SpotifyRequest->requestRecommendation($endpoint, $seed, $this->SpotifyToken()), TRUE);
 
         //Spotify Data
-
         $artists = [];
         $tracks = [];
         $image_urls = [];
         $album_names = [];
+        $track_links = [];
         for ($i = 0; $i < $limit; $i++) {
             array_push($artists, $response['tracks'][$i]['artists'][0]['name']);
             array_push($tracks, $response['tracks'][$i]['name']);
             array_push($image_urls, $response['tracks'][$i]['album']['images'][1]['url']);
             array_push($album_names, $response['tracks'][$i]['album']['name']);
+            array_push($track_links, $response['tracks'][$i]['album']['external_urls']['spotify']);
         }
         $data['artists'] = $artists;
         $data['tracks'] = $tracks;
         $data['images'] = $image_urls;
         $data['albums'] = $album_names;
+        $data['links'] = $track_links; 
         return $data;
     }
 

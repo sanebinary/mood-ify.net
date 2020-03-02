@@ -160,7 +160,9 @@ body{
 	cursor: pointer;
 	position: relative;
   	align-items: flex-start;
-  	color:  #ffffff;
+	  color:  #ffffff;
+	  outline: none;
+	  text-decoration: none;
 }
 
 .song-listing--info-wrapper .song-listing--artist {

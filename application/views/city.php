@@ -49,8 +49,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
         </div>
         <div class="recommended-songs--wrapper">
             <?php $x = 0;
-            while ($x < $limit) { ?>
-                <a class="song-listing--item">
+            while ($x < $limit) { ?>                   
+                <a class="song-listing--item" href="<?php echo $links[$x]; ?>">
                     <div class="song-listing--item-album-img">
                         <img src="<?php echo $images[$x]; ?>" alt="<?php echo $albums[$x]; ?>">
                     </div>
