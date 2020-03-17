@@ -11,6 +11,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <link rel="stylesheet" type="text/css" href="../assets/css/homepage.css">
     <link href="https://fonts.googleapis.com/css?family=Sigmar+One&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../assets/script/Spotify.js"></script>
     <title>Moodify Search Page</title>
 </head>
 
@@ -18,7 +19,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
     <div class="city-find-page--wrapper">
         <div class="city-find-page-title"><a id="mood" href="<?php echo base_url()?>">Moodify</a><a id="city-find-page-title--dot">.</a></div>
-        <span class="city-find-page-connect">Connect to <a id="Spotify">Spotify</a></span>
+        <span class="city-find-page-connect">Connect to <a href="#" id="Spotify">Spotify</a></span>
         <div class="city-find-form--wrapper">
             <form class="city-find-form" method="GET" action="/city/">
                 <input autocomplete="off" spellcheck="false" class="city-find-form--input" type="text" placeholder="search places" name="city">
