@@ -28,7 +28,12 @@ class City extends CI_Controller
     {
         //get weather data
         $weather = $this->Weather->getWeather();
-        $seedlist = array("Rain" => 'rainy', "Clouds" => 'sunny', "Drizzle" => 'rainy', "Snow" => 'windy',"Clear"=>"windy");
+        $seedlist = array("Rain" => 'rainy', 
+                        "Clouds" => 'sunny', 
+                        "Drizzle" => 'rainy', 
+                        "Snow" => 'windy',
+                        "Clear"=>"windy",
+                        "Thunderstorm"=>"rainy");
         $endpoint = "https://api.spotify.com/v1/recommendations";
 
         $data["city"] = $weather["name"];

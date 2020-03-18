@@ -13,7 +13,6 @@ class SpotifyRecom extends CI_Model
         $seeds = [];
         //variables
         $seed_proportion = $this->getRandSeeds();
-
         //public stuff
         $this->optional_seeds = array(
             'limit' => 12,
@@ -21,7 +20,6 @@ class SpotifyRecom extends CI_Model
             'energy' => 0.75,
             'valence' => 0.65,
         );
-
         //the default value for the required seeds  
         $this->required_seeds = array(
             //Flyers, Em có chắc không, Psycho, under pressure, fancy
@@ -32,7 +30,6 @@ class SpotifyRecom extends CI_Model
             //hello sleepwalkers ; ngọt ; red velvet; son tung mtp; tiên tiên
             'seed_artists' => array('12CmFAwzxYnVtJgnzIysvm', '0V2DfUrZvBuUReS1LFo5ZI', '1z4g3DjTBBZKhvAroFlhOM', '5dfZ5uSmzR7VQK0udbAVpf', '5OvCh1Nin8AGw7OkxYinBe'),
         );
-
         //separate keys and values of the required seeds 
         //the separation is to make it easier to choose the seed values randomly 
         $seed_values = [];
@@ -48,18 +45,14 @@ class SpotifyRecom extends CI_Model
                 array_pop($seed_values[$x]);
             }
         }
-
         $i = 0;
         foreach ((array_keys($this->required_seeds)) as $key){
             $this->required_seeds[$key] = $seed_values[$i];
             $i++;
         }
-
         //merge optional seeds with the return seeds
         $seeds = array_merge($seeds, $this->optional_seeds);
         $seeds = array_merge($seeds, $this->required_seeds);
-
-
         return $seeds;
     }
 

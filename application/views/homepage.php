@@ -19,7 +19,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
     <div class="city-find-page--wrapper">
         <div class="city-find-page-title"><a id="mood" href="<?php echo base_url()?>">Moodify</a><a id="city-find-page-title--dot">.</a></div>
-        <span class="city-find-page-connect">Connect to <a href="#" id="Spotify">Spotify</a></span>
+        <span class="city-find-page-connect" id="Spotify">Connect to <a id="sitename">Spotify</a></span>
         <div class="city-find-form--wrapper">
             <form class="city-find-form" method="GET" action="/city/">
                 <input autocomplete="off" spellcheck="false" class="city-find-form--input" type="text" placeholder="search places" name="city">
