@@ -26,7 +26,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
             </form>
         </div>
         <p class="deep-quotes">Find your city<a class="dot">.</a> Check your weather<a class="dot">.</a> Listen to our music<a class="dot">.</a></p>
-
+        <p id="signin">Sign In</p>
+        <p id="signup">Sign Up</p>
     </div>
 
 </body>
