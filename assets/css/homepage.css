@@ -26,7 +26,7 @@ body {
 }
 
 body::after {
-	background-image: url(../imgs/jamakassi-wejxKZ-9IZg-unsplash.jpg);
+	background-image: url(../imgs/gmvw7g7rd0l41.jpg);
 	background-position: right bottom;
 	content: "";
 	opacity: 0.9;
@@ -36,6 +36,12 @@ body::after {
 	right: 0;
 	position: absolute;
 	z-index: -1;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
 }
 
 .city-find-page--wrapper {
@@ -68,7 +74,7 @@ body::after {
 	opacity: 1;
 	outline: none;
 	text-decoration: none;
-	color:inherit;
+	color: inherit;
 }
 
 #city-find-page-title--dot {
@@ -80,7 +86,7 @@ body::after {
 }
 
 .city-find-page-connect {
-	color: #ffffff;
+	color: white;
 	padding-bottom: 1.5rem;
 	font-family: Proxima Nova;
 	font-size: 3.6rem;
@@ -88,6 +94,25 @@ body::after {
 	margin-left: 0;
 	margin-right: 0rem;
 	padding-left: 0.35rem;
+	opacity: 0.8;
+}
+
+#sitename {
+	color: white;
+}
+
+.city-find-page-connect:hover {
+	opacity: 1;
+	transition: opacity 0.2s ease-out;
+	-moz-transition: opacity 0.2s ease-out;
+	-webkit-transition: opacity 0.2s ease-out;
+	-o-transition: opacity 0.2s ease-out;
+}
+
+.city-find-page-connect:hover #sitename {
+	opacity: 1;
+	color: rgb(1, 255, 1);
+	transition: all 0.2s ease;
 }
 
 .city-find-form--wrapper {
@@ -109,7 +134,7 @@ body::after {
 	width: 100%;
 	font-family: Circular;
 	font-size: 3rem;
-	color: #61605e;
+	color: rgb(54, 54, 54);
 	background: none;
 	border: none;
 	cursor: pointer;
@@ -126,10 +151,6 @@ body::after {
 	color: #e35865;
 }
 
-#sitename {
-	color: #1db954;
-}
-
 .deep-quotes {
 	color: #ffffff;
 	font-family: Circular;
@@ -137,14 +158,40 @@ body::after {
 	align-self: flex-end;
 	margin-top: 0.8rem;
 }
-#myVideo {
-	position: absolute;
-	bottom: 0px;
-	right: 0px;
-	min-width: 100%;
-	min-height: 100%;
-	width: fit-content;
-	height: fit-content;
-	z-index: -1000;
-	overflow: hidden;
+
+@keyframes hide {
+	0% {
+		transform: translateY(0);
+	}
+	20% {
+		transform: translateY(5px);
+	}
+	100% {
+		transform: translateY(-32vh);
+	}
+}
+
+@keyframes show {
+	0% {
+		transform: translateY(-32vh);
+	}
+	80% {
+		transform: translateY(-5px);
+	}
+	100% {
+		transform: translateY(0vh);
+	}
+}
+
+.hide {
+	animation: hide 0.5s forwards ease-in-out;
+	animation-delay: 0.2s;
+}
+
+.show {
+	animation: show 0.5s forwards ease-in-out;
+}
+
+#map {
+	height: 100%;
 }
