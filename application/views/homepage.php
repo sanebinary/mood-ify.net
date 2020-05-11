@@ -40,7 +40,5 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <script type="text/javascript" src="../assets/script/leaflet-owm.js"></script>
     <script type="text/javascript" src="../assets/script/iconLayers.js"></script>
     <script type="text/javascript" src="../assets/script/homepage.js"></script>
-
-
-    <!--<script type="text/javascript" src="../assets/script/Spotify.js"></script>-->
+    <script type="text/javascript" src="../assets/script/Spotify.js"></script>
 </body>
