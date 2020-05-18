@@ -1,6 +1,5 @@
 .DS_Store
 
-test*
 
 application/cache/*
 !application/cache/index.html
