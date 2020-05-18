@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Weather extends CI_Model
+class Weather
 {
     private $url = "http://api.openweathermap.org/data/2.5/weather?units=metric&";
     private $apiKey;

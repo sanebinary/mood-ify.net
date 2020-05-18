@@ -1,5 +1,5 @@
 <?php
-class SpotifyToken extends CI_Model
+class SpotifyToken
 {
     private $token;
     private $scope;
@@ -20,6 +20,12 @@ class SpotifyToken extends CI_Model
     public function sepToken($tokenJson)
     {
         $token = json_decode($tokenJson, true);
+        if (gettype($token) !== "array"){
+            throw new Exception('Could not decode token');
+        }
+        if (!array_key_exists('access_token', $token) || !array_key_exists('scope', $token) || !array_key_exists('token_type', $token) || !array_key_exists('expires_in', $token)){
+            throw new Exception('Invalid/Malformed Json Response');
+        }
         $this->token = $token['access_token'];
         $this->scope = $token['scope'];
         $this->type = $token['token_type'];

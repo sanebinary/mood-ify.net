@@ -10,6 +10,12 @@
 		"slack": "https://codeigniterchat.slack.com",
 		"source": "https://github.com/bcit-ci/CodeIgniter"
 	},
+	"autoload": {
+		"classmap": [
+			"application/controllers",
+			"application/models"
+		]
+	},
 	"require": {
 		"php": ">=5.3.7"
 	},
@@ -18,6 +24,6 @@
 	},
 	"require-dev": {
 		"mikey179/vfsstream": "1.1.*",
-		"phpunit/phpunit": "4.* || 5.*"
+		"phpunit/phpunit": "^9"
 	}
 }

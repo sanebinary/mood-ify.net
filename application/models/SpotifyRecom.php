@@ -1,5 +1,5 @@
 <?php
-class SpotifyRecom extends CI_Model
+class SpotifyRecom
 {
     //spotify requires three compulsory seed values
     public $required_seeds;
@@ -12,7 +12,7 @@ class SpotifyRecom extends CI_Model
         //function will return this array
         $seeds = [];
         //variables
-        $seed_proportion = $this->getRandSeeds();
+        $seed_proportion = $this->getRandSeeds(rand(3, 5));
         //public stuff
         $this->optional_seeds = array(
             'limit' => 12,
@@ -61,7 +61,7 @@ class SpotifyRecom extends CI_Model
         //function will return this array
         $seeds = [];
         //variables
-        $seed_proportion = $this->getRandSeeds();
+        $seed_proportion = $this->getRandSeeds(rand(3,5));
         $seed_item_limit = 5;
 
         //public stuff
@@ -118,7 +118,7 @@ class SpotifyRecom extends CI_Model
         //function will return this array
         $seeds = [];
         //variables
-        $seed_proportion = $this->getRandSeeds();
+        $seed_proportion = $this->getRandSeeds(rand(3,5));
         $seed_item_limit = 5;
 
         //public stuff
@@ -169,10 +169,9 @@ class SpotifyRecom extends CI_Model
         return $seeds;
     }
 
-    public function getRandSeeds()
+    public function getRandSeeds($total)
     {
         $num_seeds = 3;
-        $total = rand(3, 5);
         set_time_limit(10);
         $groups             = array();
         $group              = 0;
