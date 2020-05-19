@@ -17,5 +17,7 @@
     -  The user input is used to get data from OpenWeatherMap API. Used to display weather data and to generate song lists
 
 ## Links to SRS and SDD files:
-updating...
+SRS: https://docs.google.com/document/d/1p3VvScri2B_AuEkam9x-jjl-RO8YP2DNDfYC4YcsY_Y/edit
+
+SDD: https://docs.google.com/document/d/1TYXIlurwH-EVd8RyRms3aIYL86yCo2LkCwHy8fkYwqQ/edit
     
